@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(image_tools)
+project(image_tools_dev)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -13,33 +13,38 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+
 find_package(OpenCV REQUIRED)
 
 include_directories(include)
 
-add_library(imagetools SHARED
+add_executable(cam2image
+  src/burger.cpp
   src/cam2image.cpp
-  src/showimage.cpp
-  src/burger.cpp)
-target_compile_definitions(imagetools
-  PRIVATE "IMAGE_TOOLS_BUILDING_DLL")
-ament_target_dependencies(imagetools
+  src/options.cpp
+)
+ament_target_dependencies(cam2image
   "rclcpp"
   "sensor_msgs"
   "std_msgs"
-  "rclcpp_components"
   "OpenCV")
-rclcpp_components_register_node(imagetools PLUGIN "image_tools::Cam2Image" EXECUTABLE cam2image)
-rclcpp_components_register_node(imagetools PLUGIN "image_tools::ShowImage" EXECUTABLE showimage)
+
+add_executable(showimage
+  src/options.cpp
+  src/showimage.cpp
+)
+ament_target_dependencies(showimage
+  "rclcpp"
+  "sensor_msgs"
+  "std_msgs"
+  "OpenCV")
 
 install(TARGETS
-  imagetools
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+  cam2image
+  showimage
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -2,52 +2,6 @@
 Changelog for package image_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.9.4 (2022-07-25)
-------------------
-* Update maintainer list for Foxy (`#471 <https://github.com/ros2/demos/issues/471>`_)
-* Contributors: Michael Jeronimo
-
-0.9.3 (2020-06-01)
-------------------
-
-0.9.2 (2020-05-26)
-------------------
-
-0.9.1 (2020-05-12)
-------------------
-
-0.9.0 (2020-04-30)
-------------------
-* Replace deprecated launch_ros usage (`#437 <https://github.com/ros2/demos/issues/437>`_)
-* Fix frame_id  (`#433 <https://github.com/ros2/demos/issues/433>`_)
-* Update launch_ros action usage (`#431 <https://github.com/ros2/demos/issues/431>`_)
-* code style only: wrap after open parenthesis if not in one line (`#429 <https://github.com/ros2/demos/issues/429>`_)
-* Contributors: Dirk Thomas, Gonzo, Jacob Perron
-
-0.8.4 (2019-11-19)
-------------------
-
-0.8.3 (2019-11-11)
-------------------
-* image_tools should start with reliable policy (`#411 <https://github.com/ros2/demos/issues/411>`_)
-* Contributors: Shane Loretz
-
-0.8.2 (2019-11-08)
-------------------
-
-0.8.1 (2019-10-23)
-------------------
-* Fix burguer mode parameter typo in help text (`#406 <https://github.com/ros2/demos/issues/406>`_)
-* Replace ready_fn with ReadyToTest action (`#404 <https://github.com/ros2/demos/issues/404>`_)
-* [image_tools] Use ROS parameters instead of regular CLI arguments (`#398 <https://github.com/ros2/demos/issues/398>`_)
-* Contributors: Brian Marchi, Jacob Perron, Peter Baughman
-
-0.8.0 (2019-09-26)
-------------------
-* Adding visibility macros to demos (`#381 <https://github.com/ros2/demos/issues/381>`_)
-* Demos using composition (`#375 <https://github.com/ros2/demos/issues/375>`_)
-* Contributors: Siddharth Kucheria
-
 0.7.6 (2019-05-30)
 ------------------
 
